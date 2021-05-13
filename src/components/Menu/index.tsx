@@ -7,6 +7,10 @@ import useTheme from 'hooks/useTheme'
 import {useGetPriceData, useGetBeezPriceData} from 'hooks/useGetPriceData'
 import { injected, bsc, walletconnect } from 'connectors'
 import links from './config'
+import {priceContracts, beezPriceContracts} from '../../constants/eggPriceContracts'
+
+const hnyAddr = priceContracts.cakeAddress
+const beezAddr = beezPriceContracts.beezAddress
 
 const Menu: React.FC = props => {
   const { account, activate, deactivate } = useWeb3React()
@@ -18,7 +22,7 @@ const Menu: React.FC = props => {
   return (
     <UikitMenu
       links={links}
-      priceLink="https://poocoin.app/tokens/0x5FFa2807F9A8b762eDeEab4ca37211Ca3117df8A"
+      priceLink={'https://poocoin.app/tokens/'.concat(hnyAddr)}
       account={account as string}
       login={(connectorId: ConnectorId) => {
         if (connectorId === 'walletconnect') {
@@ -39,7 +43,7 @@ const Menu: React.FC = props => {
       setLang={setSelectedLanguage}
       beePriceUsd={beezPriceUsd}
       cakePriceUsd={cakePriceUsd}
-      beePriceLink="https://poocoin.app/tokens/0xa427ab59ee9e4c6a65401fe689991ad93e42b51a"
+      beePriceLink={"https://poocoin.app/tokens/".concat(beezAddr)}
       {...props}
     />
   )

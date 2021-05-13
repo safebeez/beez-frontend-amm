@@ -1,10 +1,14 @@
 import { MenuEntry } from '@pancakeswap-libs/uikit'
+import {priceContracts, beezPriceContracts} from '../../constants/eggPriceContracts'
+
+const hnyAddr = priceContracts.cakeAddress
+const beezAddr = beezPriceContracts.beezAddress
 
 const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: '../',
+    href: 'https://safebeez.github.io/',
   },
   {
     label: 'Trade',
@@ -12,31 +16,31 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange HNY',
-        href: '?outputCurrency=0x5FFa2807F9A8b762eDeEab4ca37211Ca3117df8A',
+        href: '/swap/?outputCurrency='.concat(hnyAddr)
+      },
+      {
+        label: 'HNY Liquidity',
+        href: '/add/BNB/'.concat(hnyAddr)
       },
       {
         label: 'Exchange BEEZ',
-        href: '?outputCurrency=0xa427ab59ee9e4c6a65401fe689991ad93e42b51a',
+        href: '/swap/?outputCurrency='.concat(beezAddr)
       },
       {
-        label: 'Liquidity: HNY',
-        href: '#/add/0x5FFa2807F9A8b762eDeEab4ca37211Ca3117df8A',
-      },
-      {
-        label: 'Liquidity: BEEZ',
-        href: '#/add/0xa427ab59ee9e4c6a65401fe689991ad93e42b51a',
-      },
+        label: 'BEEZ Liquidity',
+        href: '/add/BNB/'.concat(beezAddr)
+      }
     ],
   },
   {
     label: 'Honeycomb',
     icon: 'FarmIcon',
-    href: '/honeycomb',
+    href: 'https://safebeez.github.io/honeycomb',
   },
   {
     label: 'Nests',
     icon: 'PoolIcon',
-    href: '/nests',
+    href: 'https://safebeez.github.io//nests',
   },
   {
     label: 'Info',
@@ -44,23 +48,23 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'HNY on PancakeSwap',
-        href: 'https://pancakeswap.info/token/0x5FFa2807F9A8b762eDeEab4ca37211Ca3117df8A',
+        href: 'https://pancakeswap.info/token/'.concat(hnyAddr),
       },
       {
         label: 'BEEZ on PancakeSwap',
-        href: 'https://pancakeswap.info/token/0xa427ab59ee9e4c6a65401fe689991ad93e42b51a',
+        href: 'https://pancakeswap.info/token/'.concat(beezAddr),
       },
       /* {
         label: 'CoinGecko',
-        href: 'https://www.coingecko.com/en/coins/goose-finance',
+        href: 'https://www.coingecko.com/e',
       },
       {
         label: 'CoinMarketCap',
-        href: 'https://coinmarketcap.com/currencies/goose-finance/',
+        href: 'https://coinmarketcap.com/currenc',
       },
       {
         label: 'AstroTools',
-        href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
+        href: 'https://app.astrotools.io/pancake-pair-ee7cbecdd23a16dfa5573df54d98f7caae03019',
       }, */
     ],
   },
@@ -70,7 +74,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Docs',
-        href: 'https://goosedefi.gitbook.io/goose-finance/',
+        href: 'https://gfi-finance/',
       }
     ],
   }, */
@@ -80,11 +84,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Apply Here',
-        href: 'https://github.com/goosedefi/',
+        href: 'https://github.codefi/',
       },
       {
         label: 'Info',
-        href: 'https://github.com/goosedefi/g',
+        href: 'https://github.defi/g',
       },
     ],
   },
