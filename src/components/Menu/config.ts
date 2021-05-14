@@ -5,7 +5,7 @@ const hnyAddr = priceContracts.cakeAddress
 const beezAddr = beezPriceContracts.beezAddress
 
 const config: MenuEntry[] = [
-  {
+ /*  {
     label: 'Home',
     icon: 'HomeIcon',
     href: 'https://safebeez.github.io/',
@@ -35,12 +35,12 @@ const config: MenuEntry[] = [
   {
     label: 'Honeycomb',
     icon: 'FarmIcon',
-    href: 'https://safebeez.github.io/honeycomb',
+    href: 'https://safebeez.github.io/',
   },
   {
     label: 'Nests',
     icon: 'PoolIcon',
-    href: 'https://safebeez.github.io//nests',
+    href: 'https://safebeez.github.io//',
   },
   {
     label: 'Info',
@@ -53,7 +53,7 @@ const config: MenuEntry[] = [
       {
         label: 'BEEZ on PancakeSwap',
         href: 'https://pancakeswap.info/token/'.concat(beezAddr),
-      },
+      }, */
       /* {
         label: 'CoinGecko',
         href: 'https://www.coingecko.com/e',
@@ -66,8 +66,8 @@ const config: MenuEntry[] = [
         label: 'AstroTools',
         href: 'https://app.astrotools.io/pancake-pair-ee7cbecdd23a16dfa5573df54d98f7caae03019',
       }, */
-    ],
-  },
+ /*    ],
+  }, */
 /*   {
     label: 'More',
     icon: 'MoreIcon',
@@ -78,7 +78,7 @@ const config: MenuEntry[] = [
       }
     ],
   }, */
-  {
+ /*  {
     label: 'Partnership?',
     icon: 'MoreIcon',
     items: [
@@ -91,7 +91,7 @@ const config: MenuEntry[] = [
         href: 'https://github.defi/g',
       },
     ],
-  },
+  }, */
 ]
 
 export default config
